@@ -127,7 +127,7 @@ header{
 	height: 100vh;
     top:-5rem;
 	position:relative;
-	background-image: url(/public/assets/Imagen/alascompletas.jpeg);
+	background-image: url(../../assets/Imagen/alascompletas.jpeg);
     background-size:cover;
     background-repeat: no-repeat;   
     background-position: center; 
