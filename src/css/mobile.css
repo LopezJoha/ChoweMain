@@ -1,0 +1,829 @@
+*{
+	box-sizing: border-box;
+	margin:0px;
+	padding:0px;
+	scroll-behavior: smooth;	
+}
+
+:root{
+	--darkBlue: #383948;
+	--yellowChowe: #d5bf0f;
+	--white: #f5f5f5;
+	--black:black;
+	--grey: grey;
+    --justWhite: white;
+	--whatsapp: #25D366;
+}
+
+html{
+    font-family: 'Arima Madurai', cursive;
+    font-size: 62.5%;
+}
+
+.Titulo{
+    font-size: 4rem;
+    text-align: center;
+	text-align-last: center;
+    line-height: 4rem;
+}
+
+.Subtitulo {
+    font-size: 2rem;
+    text-align: center;
+    margin-inline: 2rem;
+}
+
+.Parrafo{
+	font-size: 1.5rem;
+    text-align: center;
+}
+
+header{
+    position: relative;
+    width: 100%;
+    height: 5rem;
+    background-color: transparent;  
+    border-bottom: 2px solid rgb(0, 0, 0, 0.1);  	
+}
+
+
+.header-imagen{ 
+    position: absolute;  
+    height: 12rem;
+    width: 12rem;
+    top: -1.5rem;
+    left: 0;
+    z-index: 110;
+	transition: width 2s, height 2s, transform 2s;
+}
+
+.header-imagen:hover{
+	cursor: pointer; 
+	transform: rotate(360deg);
+}
+
+.menu-icon{
+    font-size: 3.5rem;
+    visibility: visible;
+    position: absolute;
+    top: .60rem;
+    right: 2rem;
+    z-index: 100;
+    color: whitesmoke;
+    cursor: pointer;
+}
+
+.menu-icon:hover{
+	color: var(--yellowChowe);
+}
+
+.navBar{
+    visibility: hidden;
+    position:absolute;
+    width:100%;
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(0, 0, 0, 0.4);
+    z-index: 99;	
+}
+
+.navBar span{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    border-bottom: 2px solid rgb(0, 0, 0, 0.1);
+	padding-top: 1rem;	
+}
+
+.navBar span:hover{
+    color: var(--yellowChowe);
+}
+
+.nav-item{
+    color: var(--white);
+    text-decoration: none;  
+}
+
+.nav-item:hover{
+    color: var(--yellowChowe);
+    cursor: pointer;
+}
+
+.visible{
+    visibility: visible;
+}
+.hidden{
+	visibility: hidden;
+}
+
+#header_Lista1, #header_Lista2{
+    visibility: hidden;
+    height: 0;
+}
+
+.body-First-Container{
+    min-width: 300px;
+	height: 100vh;
+    top:-5rem;
+	position:relative;
+	background-image: url(/public/assets/Imagen/alascompletas.jpeg);
+    background-size:cover;
+    background-repeat: no-repeat;   
+    background-position: center; 
+	background-color: var(--darkBlue);
+  	background-blend-mode: screen;
+}
+
+.Opacity-Effect{
+	position: absolute;
+	height: 100%;
+	width: 100%;
+	background-color: black;
+	opacity: 0.6;
+}
+
+
+.body-First-Content{
+	height: 100%;
+	position: absolute;
+	left: 50%;
+	transform: translateX(-50%);
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	color:white;
+	z-index: 5;
+} 
+
+.Color-Chowe{
+	color: #d5bf0f;	
+}
+
+.body-First-Tittle{
+	font-family: 'Playfair Display SC', serif;
+    font-size: 6rem;
+    text-align: center;
+    margin-top: 7rem;
+    line-height: 7rem;
+}
+
+.body-First-Par{
+	color: var(--white);
+}
+
+.Button{
+	text-decoration: none;
+	width: 14rem;
+	padding: 0.5rem;
+	background-color: #d5bf0f;
+	border: solid #383948;
+	border-radius: 40px;
+	margin-top: 2rem;
+	text-align: center;
+	font-family: 'Arima Madurai', cursive;
+	font-size: 1.8rem;
+	font-weight: 900;
+}
+
+.Button:Hover{
+	background-color: #383948;
+	border: solid #d5bf0f;
+	cursor: pointer;
+	color: #d5bf0f;	
+}
+
+.Button span{
+	font-size: 1.5rem;
+	font-family: 'Arima Madurai', cursive;
+	color:#383948;
+}
+
+.Button span:hover{
+	color:#d5bf0f
+}
+
+.body-Second-Heading{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items:center;
+    margin-top: 3rem;	
+}
+
+.body-Second-Tittle{
+    margin-bottom: 1rem;      
+}
+
+.body-Second-Elements{     
+    flex-direction: column;
+    text-align: center;        
+}
+
+.body-Second-Description{
+    width:100%;
+    margin-right: 4.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content:space-evenly;
+}
+
+.body-Second-Content{
+    display: flex;
+    flex-direction: column;
+} 
+
+.body-Second-Par{
+    margin-top: -.3rem;
+    text-align: center;
+    justify-self: center;	
+}
+
+.body-Third-Content{
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;	
+}
+
+.body-Third-Par{
+    height: 5rem;
+}
+
+.body-Third-Par span{
+    visibility: hidden;        
+}
+
+.body-Second-Media{
+    width:100%;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 3rem;	
+}
+
+.body-Second-Media__One {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: self-end;
+}
+
+.body-Second-Media__Two{
+    margin-top: 2rem;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; 
+	align-items: center;   
+}
+
+.body-Second-Img{
+	width: 90%;
+	height: 40%;
+	border-radius: 30px;
+	margin:.8rem;
+	box-shadow: 1px 10px 25px rgba(0,0,0,0.5);	
+}
+
+.spanArrowUp{
+    position:fixed;	
+	bottom: 2rem;
+	right: 2rem;
+	color: var(--darkBlue);
+	z-index: 120;
+	cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;    
+}
+
+#arrowUp{
+	font-size: 3rem;
+    text-decoration: none;	
+	color: var(--darkBlue);
+	z-index: 10;
+	cursor: pointer;
+}
+
+.WhatsApp{
+	position:fixed;	
+	top: 8.5rem;
+	right: 2rem;
+	color: var(--whatsapp);
+	z-index: 120;
+	cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;	
+}
+
+#Wp{
+	font-size: 3rem;
+    text-decoration: none;	
+	color: var(--whatsapp);
+	z-index: 120;
+	cursor: pointer;
+	
+}
+
+.body-Third-Heading{
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items:center;
+    padding-bottom: 1.5rem; 
+}
+
+.body-Third-Menu{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    margin-inline: 3rem;
+    padding: 1rem;
+    box-shadow: 3px 3px 30px rgb(0 0 0 / 20%);
+    border-radius: 3rem;
+    
+}
+
+.body-Third-Menu:hover{
+	background-color: white;
+}
+
+.Menu-Option{
+	background-color: white;
+	border: none;
+	width: 12rem;
+	padding: 0.5rem;
+	border: solid white;
+	font-family: 'Arima Madurai', cursive;
+    font-size: 2rem;
+	color: #383948;
+	font-weight: bolder;
+}
+
+.activo, .Menu-Option:hover{
+	border-radius: 40px;
+	background-color: #d5bf0f;
+	cursor: pointer;
+	color: white;
+    text-shadow: 1px 1.5px black;
+}
+
+#esconderTexto{
+	visibility: visible;
+	margin: 1.8rem;
+    visibility: visible;
+    height: auto;
+    text-align-last: center;
+}
+
+.body-Third-Menu-Wrapper{
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+#allTheFood{
+	display: flex;
+    flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	margin-inline: 3rem;
+}
+
+.food-List{
+	display: flex;
+    flex-direction: column;      
+}
+
+.food-List_element{
+	min-width: 26rem;
+	display: flex;	
+    justify-content: center;
+	align-items: center;
+    padding: .5rem;
+    margin: 0.5rem;
+    border: #907419 solid 2px;
+    border-radius: 20px;
+	box-shadow: 1px 1px 10px #907419;
+}
+
+.img-list-element {
+    float: left; 
+    height: 7rem;
+    width: 7rem;
+    border-radius: 50%;
+	margin: 1rem 1rem;
+}
+
+.List-element-one{	
+	display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#numeroAlitas {
+    color: var(--yellowChowe);            
+}
+
+.titulo-menu {
+    line-height: 1.5;
+    font-size: 2rem;
+    padding-top: .5rem;
+}
+
+.parrafo-menu{
+	font-size: 1.5rem;
+    
+}
+
+.food-List_else{
+	display: flex; 
+	flex-direction: column;
+} 
+
+.parrafo_else{	
+	text-align: center; 
+	margin: 2.5px; 
+	font-size: 2rem; 
+	justify-content: center; 
+	align-items: center;
+	padding: 1rem;
+}
+
+.body-Third-Button{
+ 	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding-top: 1rem;
+	padding-bottom: 3rem;
+}
+
+.body-Forth-Container{
+    display: flex;
+    gap: 4rem;
+    overflow-x: auto;
+    overscroll-behavior-x: contain;
+    scroll-snap-type: x proximity;
+}
+
+.body-Forth-Container::-webkit-scrollbar {
+    -webkit-appearance: none;
+}
+
+.Forth-Media {
+    display: flex;
+    flex-direction: column;
+	justify-content: center;
+	align-items: center;    
+    min-width: 23rem;
+    max-width: 30rem;
+    height: 25rem;
+    margin: 3rem auto 0;
+    padding: 0 1.5rem;
+    background-color: var(--justWhite);
+    border-radius: 1.5rem;
+    box-shadow: 0 4px 8px rgba(89,73,30,0.16);
+	border: solid 1px var(--grey);
+    scroll-snap-align: center;
+}
+
+.uno{
+	margin-left: 4rem;	
+}
+
+.tres{
+	margin-right: 4rem;
+}
+
+.Forth-Media-img{
+	width: 11rem;
+	height: 8rem;
+}
+
+.Forth-Media h2{
+	font-size: 2rem;
+	font-weight: bolder;
+	color: black;
+	text-shadow: 1px 1px #34495E;
+}
+
+.body-Fifth-Heading{
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items:center;
+	margin-top: 3rem;
+	padding-top: 3rem;	
+}
+
+.body-Fifth-Tittle{
+	margin-top: 2rem;
+}
+
+.body-Fifth-Par{
+	margin: 2rem;	
+}
+
+.body-Fifth-Media-Container{
+	position: relative;
+	width: 100%;
+	height: 20rem;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;    
+}
+
+.body-Fifth-Media{
+	position: relative;
+	width: 100%;
+	height: auto;
+}
+
+.Wrapper-Fifth-Media {
+	position: relative;
+	z-index: 195;
+    left: 4rem; 
+    width: 98vw;
+    display: flex;
+    height: auto;
+    justify-content: left;
+    align-items: center;
+    overflow: auto;    
+    scroll-behavior: smooth;
+    scroll-snap-align: center;
+}
+
+.Wrapper-Fifth-Media::-webkit-scrollbar{
+	-webkit-appearance: none;
+}
+
+.body-Fifth-Img{
+	width: 23rem;
+	height: 15rem;
+	border-radius: 30px;
+	margin:1px 10px;
+	cursor:pointer;
+	border:2px solid black;
+	overflow: hidden;
+    scroll-snap-align: center;
+}
+
+#button-Prev {
+    position: absolute;
+	left: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 3rem;
+    z-index: 200;
+    padding: 1rem;
+	background-color: var(--yellowChowe);	
+}
+
+#button-Next{
+	position: absolute;
+	right: -2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 3rem;
+    z-index: 200;
+    padding: 1rem;
+	background-color: var(--yellowChowe);	
+}
+
+#button-Prev:hover, #button-Next:hover{
+	color: var(--grey);
+	cursor: pointer;
+}
+
+.body-sixth-Content{
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+.body-sixth-Heading{
+	margin-top: 2rem;
+	padding-top: 2rem;	
+}
+
+.body-sixth-Wrapper{
+	width: 100vw;
+	display: flex;
+	flex-direction: column;
+	justify-content:space-evenly;
+	align-items: center;
+}
+
+.body-sixth-map{
+	position: relative;
+    width: 100%;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+#Mapa{
+	position: absolute;
+	overflow: hidden;
+    visibility: hidden;
+    height: 25rem;
+    border: 2px solid black;
+	z-index: 99;
+	top:0;
+}
+
+#ocultar{
+	visibility: hidden;
+	position: absolute;
+	z-index: 110;
+	right: 50%;	
+}
+
+#cerrar{
+	visibility: hidden;
+	position: absolute;
+	font-size: 2.5rem;
+	cursor: pointer;
+	color: black;
+	left: 50%;
+	top: 5px;
+	z-index: 110;
+}
+
+#cerrar:hover{
+	color: #34495E;
+	cursor: pointer;
+}
+
+.info-contact{
+	width: 90%;
+	font-family: 'Arima Madurai', cursive;
+	font-size: 1.8rem;
+    text-align: center;
+	position: relative;
+    margin-top:2rem;
+    display: flex;
+	flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: var(--darkBlue);
+}
+
+.info-contact, h2, a{
+	font-family: 'Arima Madurai', cursive;
+	font-size: 1.7rem;
+	text-decoration: none;
+	color: var(--darkBlue);
+}
+
+.email:link{
+	color: var(--yellowChowe);
+}
+
+.icon-map{
+	font-size: 3rem;
+	cursor: pointer;
+	color: #383948;
+}
+
+.icon-map:hover{
+	cursor: pointer;
+	color: #d5bf0f;
+}
+
+.body-sixth-form{
+	width: 100%;
+	margin-top: 2rem;
+	padding: 20px;
+}
+
+.form-wrapper{
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;	
+}
+
+.form_text{
+	max-width: 80%;
+	font-family: 'Arima Madurai', cursive;
+	font-size:1.8rem;
+	font-weight: bolder;	
+}
+
+.campo-texto{	
+	box-sizing: border-box;
+	min-width: 70%;
+	max-width:80%;
+	border: 1px solid black;
+	border-radius: 7px;
+	padding: .6rem;
+	color: black;
+}
+
+
+.campo-enviar{
+	min-width: 70%;
+	max-width: 90%;
+	background-color: #383948;
+	color: white;
+	padding: .6rem;
+	border-radius: 20px;
+	margin: 1rem auto;
+	text-align: center;
+	cursor: pointer;
+}
+
+.campo-enviar:hover{
+	cursor: pointer;
+	background-color: #d5bf0f;
+	color: black;
+}
+
+footer{		
+	background-image: linear-gradient(0deg, rgba(56,57,72,1) 10%, rgba(255,255,255,1) 100%);
+	color: #34495E;
+	position:relative;
+}
+
+.Footer-Container{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding-top: 2rem;
+}
+
+.Footer-Container div{
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+.footer_Sec1 .footer_Sec2 .footer_Sec3{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.footer_Sec1 div{
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+.Siguenos{
+	text-shadow: 3px 3px whitesmoke;
+}
+
+.redes-sociales{
+	display: flex;
+	list-style: none;    
+}
+
+.redes-sociales li a{
+    text-decoration: none;
+	color: whitesmoke;
+	font-size: 3rem;
+	margin-inline: 1rem;
+	padding: 1rem;
+	text-shadow: 3px 3px #34495E;
+}
+
+.clausula{
+	font-family: 'Arima Madurai', cursive;
+	font-size: 1.2rem;
+	color: whitesmoke;	
+}
+
+.clausula:hover{
+	cursor: pointer;
+	color:#d5bf0f;
+}
+
+.copyright-text{
+	color: whitesmoke;
+	background-color: transparent;
+	font-size: 1.3rem;
+    text-align: center;	
+	padding-top:.3rem;
+	padding-bottom: .3rem;
+}
+
+
+
+
+
+
+

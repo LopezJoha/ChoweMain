@@ -1,0 +1,227 @@
+.Titulo{
+    font-size: 5rem;
+    text-align: center;
+    line-height: 6rem;
+}
+
+.Subtitulo {
+    font-size: 2.5rem;
+    text-align: center;
+    margin-inline: 2rem;
+}
+
+.Parrafo{
+	font-size: 2rem;
+    text-align: center;
+}
+
+.header-imagen{
+    position: absolute;
+    height: 13rem;
+    width: 13rem;
+    top: -.5rem;
+    left: 1rem;
+    z-index: 110;
+}
+
+.menu-icon {
+    visibility: hidden;    
+}
+
+.navBar {
+    color: white;
+    z-index: 100;
+    visibility: visible;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+    background: transparent;
+    top: 3rem;  
+    padding-right: 4rem;
+    font-weight: bolder;
+    text-shadow: 1px 1px var(--yellowChowe);
+}
+
+.navBar span{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-inline: 1rem;
+    border-bottom: 2px solid transparent;
+	padding-top: 1rem;	
+}
+
+.navBar span:hover{
+    color: var(--yellowChowe);
+}
+
+.nav-item{
+    color: var(--white);
+    text-decoration: none;
+    padding:0;
+    margin:0;  
+}
+
+.nav-item:hover{
+    color: var(--yellowChowe);
+    cursor: pointer;
+}
+
+.body-First-Tittle{
+	font-family: 'Playfair Display SC', serif;
+    font-size: 8rem;
+    text-align: center;
+    margin-top: 7rem;
+    line-height: 9rem;    
+}
+
+.body-First-Par {
+    margin-inline-end: initial;
+    color: var(--white);
+}
+
+.Button {
+    width: 23rem;
+    padding: 1rem;  
+}
+
+.body-First-Button{
+    font-size: 3rem;
+}
+
+#arrowUp {
+    font-size: 5rem;
+}
+
+.WhatsApp{
+	position:fixed;	
+	top: 20rem;
+	right: 2rem;
+	color: var(--whatsapp);
+	z-index: 120;
+	cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;	
+}
+
+#Wp {
+	font-size: 6rem;
+    text-decoration: none;	
+	color: var(--whatsapp);
+	z-index: 10;
+	cursor: pointer;	
+}
+
+.body-Second-Elements{
+	display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.body-Second-Description{
+    width: 40%;
+    margin-right: 0;
+    margin-top: -10rem;
+    justify-content: center;
+    align-items: center;
+}
+
+.body-Second-Media {
+    width:60%;    
+}
+
+.body-Third-Heading h2 {
+    margin: 1.5rem 0; 
+}
+
+.body-Third-Menu {
+    max-width: 52.5rem;
+    margin: 1.5rem 0;
+}
+
+.Menu-Option {
+    width: 12.5rem;
+    font-size: 2.3rem;
+}
+
+.food-List {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.food-List_element {
+    min-width: 32rem;
+}
+
+.img-list-element{
+    height: 8rem;
+    max-width: 8rem;
+}
+
+.titulo-menu {
+    font-size: 2.7rem;
+}
+
+.parrafo-menu {
+    font-size: 2rem;
+}
+
+.parrafo_else {
+    font-size: 2.5rem;
+}
+
+.Forth-Media {
+    min-width: 30rem;
+    max-width: 40rem;
+    height: 38rem;
+}
+.Forth-Media h2{
+    font-size: 3rem;
+}
+
+.Forth-Media-img {
+    width: 19rem;
+    height: 15rem;
+}
+
+img.body-Fifth-Img {
+    width: 35rem;
+    height: 20rem;
+}
+
+.info-contact{    
+	font-size: 2.3rem;    
+}
+
+.info-contact, h2, a{
+	font-size: 2rem;
+    text-decoration: none;
+}
+
+.campo-texto{	
+	width: 80vh;
+}
+
+.form_text{
+    font-size: 2.2rem;
+}
+
+#button-Prev{
+    left: 1rem; 
+}
+
+#button-Next{
+    right: 1rem;
+}
+
+@media only screen and (min-width: 800px){
+    .body-sixth-Wrapper{
+        display: inline-flex;
+        flex-direction: row;             
+    }    
+}
