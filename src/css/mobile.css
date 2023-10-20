@@ -352,7 +352,7 @@ header{
 	background-color: white;
 }
 
-.Menu-Option{
+.MenuOption{
 	background-color: white;
 	border: none;
 	width: 12rem;
@@ -364,7 +364,7 @@ header{
 	font-weight: bolder;
 }
 
-.activo, .Menu-Option:hover{
+.activo, .MenuOption:hover{
 	border-radius: 40px;
 	background-color: #d5bf0f;
 	cursor: pointer;
@@ -403,6 +403,7 @@ header{
 .food-List_element{
 	min-width: 26rem;
 	display: flex;	
+	flex-direction: column;
     justify-content: center;
 	align-items: center;
     padding: .5rem;
@@ -821,6 +822,13 @@ footer{
 	padding-bottom: .3rem;
 }
 
+.buttonsContainer{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	
+}
+
 .button__foodList{
 	width:20px; 
 	height: 20px;
@@ -829,6 +837,33 @@ footer{
 }
 
 
+.cart{
+	position: relative;
+	margin: 5px;
+	
+}
 
 
+.cartAmount {
+	position: absolute;
+	top:0;
+	right: 0;
+	font-size: 2rem;
+	color: white;
+	z-index: 20;
+	opacity: 1;
+	background-color: red;
+	border-radius: 15px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 30px;
+	width: 30px;
+}
 
+.imgCart{
+	width: 38px;
+	height: 38px;
+	margin: 10px;
+	z-index: 30;
+}

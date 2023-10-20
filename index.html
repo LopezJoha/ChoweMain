@@ -16,7 +16,13 @@
 		<link href="https://fonts.googleapis.com/css2?family=Arima+Madurai:wght@100&display=swap" rel="stylesheet">
 		<link href="https://fonts.googleapis.com/css2?family=Arima+Madurai:wght@100&family=Playfair+Display+SC&display=swap" rel="stylesheet">
 
-		
+		<script src="/src/js/codigo.js"></script>		
+		<script src="/src/js/form.js"></script>
+		<script src="/src/js/menu.js"></script>	
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/redux/4.0.5/redux.js"></script>	
+		<script src="/src//js//menuRx.js"></script>
+
+
 		<title>Chowé</title>
 		<!--<link rel="shortcut icon" href="./assets/Imagen/Chowe2.ico">	-->			
     </head>
@@ -32,9 +38,13 @@
 						<span><a id="opc3" class="Subtitulo  nav-item" href="https://api.whatsapp.com/send?phone=%2B573108639952&fbclid=IwAR3c8nr6WIywLfARdfs7pBANK643L5-OaHM3gO7uxvIS_i-bE3UXo8XbKFo" 
 							target="_blank">Domicilios</a></span>
 						<span><a id="opc4" class="Subtitulo  nav-item" href="#section6" >Contacto</a></span>
-						<span><a id="opc5" class="Subtitulo  nav-item" href="#" >
-							<img  src="./assets/cart.png" alt="img"/>
-						</a></span>	
+						<div class="cart">
+							<a id="opc5" class="Subtitulo  nav-item" href="./cart.html" >
+								<img class="imgCart" src="./assets/cart.png" alt="img"/>
+							</a>
+							<div class="cartAmount"><p>0</p></div>
+						</div>
+						
 
 					</nav>
 
@@ -110,19 +120,22 @@
 				</div> 
 				
 				<div id="opcionesMenuContenedor" class="body-Third-Menu">
-					<button id="entradas" class="Menu-Option" type="button" onclick="getMenuItems('entradas')">Entradas</button>
-					<button id="combos" class="activo Menu-Option" onclick="getMenuItems('combos')">Combos</button>
-					<button id="salsas" class="Menu-Option" onclick="getMenuItems('salsas')">Salsas</button>
-					<button id="bebidas" class="Menu-Option" onclick="getMenuItems('bebidas')">Bebidas</button>
+					<button id="entradas" class="MenuOption" type="button" onclick="handleButtonOptionClick(id)">Entradas</button>						
+					<button id="combos" class="activo MenuOption" onclick="handleButtonOptionClick(id)">Combos</button>
+					<button id="salsas" class="MenuOption" onclick="handleButtonOptionClick(id)">Salsas</button>
+					<button id="bebidas" class="MenuOption" onclick="handleButtonOptionClick(id)">Bebidas</button>
 				</div>
 
 				<div class="body-Third-Menu-Wrapper">
 					<h2 id="esconderTexto" class="Subtitulo">Nuestros Combos vienen acompañados con Papas a la francesa y salsa de la casa</h2>
 
-					<div id="allTheFood">
-						<script>
-							getMenuItems("combos");
-						</script>
+					<div id="allTheFoodContainer">
+						
+						<ul id="allTheFood" class="food-List">
+							<script>getMenuItems('combos')</script>
+							
+						</ul>
+						
 					</div>					
 				</div>
 
@@ -254,12 +267,8 @@
 			<div class="Copyright">
 				<h6 class="copyright-text"> 2023&copy; Chowé. Todos los derechos reservados.</h6>
 			</div>			
-		</footer>
-		<script src="/src/js/codigo.js"></script>		
-		<script src="/src/js/form.js"></script>
-		<script src="/src/js/menu.js"></script>	
-		<script src="/src/js/index.js"></script>		
+		</footer>	
 
-		<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC3LZ7RS7uD3d7daiRuJxNV-aRgOSpPsjY&callback=myMap"></script>
+		
 	</body> 
 </html>
