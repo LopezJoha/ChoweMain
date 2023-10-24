@@ -1,3 +1,14 @@
+:root{
+	--darkBlue: #383948;
+	--yellowChowe: #d5bf0f;
+	--white: #f5f5f5;
+	--black:black;
+	--grey: grey;
+    --justWhite: white;
+	--whatsapp: #25D366;
+}
+
+
 .Titulo{
     font-size: 5rem;
     text-align: center;
@@ -15,13 +26,16 @@
     text-align: center;
 }
 
-.header-imagen{
-    position: absolute;
+header{
+    width: 100%;
+    height: 13%;
+    background-color: var(--black);
+    z-index: 100;
+}
+
+.header-imagen{    
     height: 13rem;
     width: 13rem;
-    top: -.5rem;
-    left: 1rem;
-    z-index: 110;
 }
 
 .menu-icon {
@@ -29,6 +43,7 @@
 }
 
 .navBar {
+    height: 100%;
     color: white;
     z-index: 100;
     visibility: visible;
@@ -37,10 +52,9 @@
     justify-content: flex-end;
     align-items: center;
     background: transparent;
-    top: 3rem;  
-    padding-right: 4rem;
     font-weight: bolder;
     text-shadow: 1px 1px var(--yellowChowe);
+   
 }
 
 .navBar span{
@@ -66,6 +80,11 @@
 .nav-item:hover{
     color: var(--yellowChowe);
     cursor: pointer;
+}
+
+.imgCart{
+    height: 6rem;
+    width: 6rem;
 }
 
 .body-First-Tittle{
@@ -146,6 +165,15 @@
     font-size: 2.3rem;
 }
 
+#allTheFood{
+	
+    flex-direction: row;
+    flex-wrap: wrap;
+	justify-content: center;
+	align-items: center;
+	margin-inline: 4rem;
+}
+
 .food-List {
     display: flex;
     flex-wrap: wrap;
@@ -219,7 +247,7 @@ img.body-Fifth-Img {
     right: 1rem;
 }
 
-@media only screen and (min-width: 800px){
+@media only screen and (min-width: 1000px){
     .body-sixth-Wrapper{
         display: inline-flex;
         flex-direction: row;             

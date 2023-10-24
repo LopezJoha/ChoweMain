@@ -107,6 +107,7 @@ function changeButtonClasses(buttonName) {
   }
 }
 
+
 function getMenuItems(opcionMenu) {
   let lista = document.getElementById("allTheFood");
 

@@ -1,274 +1,143 @@
 <!DOCTYPE html>
-<html lang="es"> 
-	<head>
-		<meta charset="UTF-8">
-		<meta name="description" content="Alitas">
-		<meta name="robots" content="index,follow">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
-		
-		<link rel="stylesheet" type="text/css" href="/src/css/mobile.css">
-		<link rel="stylesheet" type="text/css" href="/src/css/tablet600.css" media="(min-width:600px)">
-		<link rel="stylesheet" type="text/css" href="/src/css/screen1024.css" media="(min-width:1024px)">		
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="description" content="Alitas" />
+    <meta name="robots" content="index,follow" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-		<script src="https://smtpjs.com/v3/smtp.js"></script> 
+    <link rel="stylesheet" type="text/css" href="/src/css/mobile.css" />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="/src/css/tablet600.css"
+      media="(min-width:600px)"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="/src/css/screen1024.css"
+      media="(min-width:1024px)"
+    />
 
-		<script src="https://kit.fontawesome.com/b90bbbdf0b.js" crossorigin="anonymous"></script>
-		<link href="https://fonts.googleapis.com/css2?family=Arima+Madurai:wght@100&display=swap" rel="stylesheet">
-		<link href="https://fonts.googleapis.com/css2?family=Arima+Madurai:wght@100&family=Playfair+Display+SC&display=swap" rel="stylesheet">
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
 
-		<script src="/src/js/codigo.js"></script>		
-		<script src="/src/js/form.js"></script>
-		<script src="/src/js/menu.js"></script>	
-		<script src="https://cdnjs.cloudflare.com/ajax/libs/redux/4.0.5/redux.js"></script>	
-		<script src="/src//js//menuRx.js"></script>
+    <script
+      src="https://kit.fontawesome.com/b90bbbdf0b.js"
+      crossorigin="anonymous"
+    ></script>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Arima+Madurai:wght@100&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Arima+Madurai:wght@100&family=Playfair+Display+SC&display=swap"
+      rel="stylesheet"
+    />
 
+    <script src="/src/js/codigo.js"></script>
+    <script src="/src/js/form.js"></script>
+    <script src="/src/js/menu.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/redux/4.0.5/redux.js"></script>
+    <script src="/src//js//menuRx.js"></script>
 
-		<title>Chowé</title>
-		<!--<link rel="shortcut icon" href="./assets/Imagen/Chowe2.ico">	-->			
-    </head>
-          
-    <body>
-		<header>
-				<img id="imagen-Header" class="header-imagen" src="./assets/Imagen/Chowe2.png" alt="logo"/>
-				<span id="menuBar" class="fa-solid fa-bars menu-icon" onclick="smallNavButton()"></span>	
-				<div id="header_Cont1" class="header-Container-Listas">
-					<nav id="header_Lista3" class="navBar">
-						<span><a id="opc1" class="Subtitulo  nav-item" href="" target="_top" >Inicio </a></span>
-						<span><a id="opc2" class="Subtitulo  nav-item" href="#Menu">Menú</a></span>
-						<span><a id="opc3" class="Subtitulo  nav-item" href="https://api.whatsapp.com/send?phone=%2B573108639952&fbclid=IwAR3c8nr6WIywLfARdfs7pBANK643L5-OaHM3gO7uxvIS_i-bE3UXo8XbKFo" 
-							target="_blank">Domicilios</a></span>
-						<span><a id="opc4" class="Subtitulo  nav-item" href="#section6" >Contacto</a></span>
-						<div class="cart">
-							<a id="opc5" class="Subtitulo  nav-item" href="./cart.html" >
-								<img class="imgCart" src="./assets/cart.png" alt="img"/>
-							</a>
-							<div class="cartAmount"><p>0</p></div>
-						</div>
-						
+    <title>Chowé</title>
+    <link rel="shortcut icon" href="./assets/Imagen/Chowe2.ico" />
+  </head>
 
-					</nav>
+  <body>
+    <header>
+      <img
+        id="imagen-Header"
+        class="header-imagen"
+        src="./assets/Imagen/Chowe2.png"
+        alt="logo"
+      />
+      <span
+        id="menuBar"
+        class="fa-solid fa-bars menu-icon"
+        onclick="smallNavButton()"
+      ></span>
+      <div id="header_Cont1" class="header-Container-Listas">
+        <nav id="header_Lista3" class="navBar">
+          <span
+            ><a id="opc1" class="Subtitulo nav-item" href="/" target="_top"
+              >Inicio
+            </a></span
+          >
+          <span
+            ><a id="opc2" class="Subtitulo nav-item" href="#Menu">Menú</a></span
+          >
+          <span
+            ><a
+              id="opc3"
+              class="Subtitulo nav-item"
+              href="https://api.whatsapp.com/send?phone=%2B573108639952&fbclid=IwAR3c8nr6WIywLfARdfs7pBANK643L5-OaHM3gO7uxvIS_i-bE3UXo8XbKFo"
+              target="_blank"
+              >Domicilios</a
+            ></span
+          >
+          <span
+            ><a id="opc4" class="Subtitulo nav-item" href="#section6"
+              >Contacto</a
+            ></span
+          >
+          <span class="cart">
+            <a
+              id="opc5"
+              class="Subtitulo nav-item"
+              href="/cart"
+              onclick="route()"
+            > Cart           
+            </a>
+            <div class="cartAmount"><p id="totalCart">0</p></div>
+          </span>
+        </nav>
+      </div>
+    </header>
+    <div id="content"></div>
 
-					<ul id="header_Lista1" class="header-contenido1__list1">
-						<li class="icono tel fa-solid fa-phone"></li>
-						<li class="icono Parrafo">310-863-99-52</li>
-						<li> <a class="icono fa-regular fa-envelope icon-mail" href="#form"></a></li>
-						<li> <a class="icono Parrafo mail" href="mailto:chowecolombia@gmail.com">chowecolombia@gmail.com</a></li>						
-					</ul>
-					
-					<ul id="header_Lista2" class="header-contenido1__list2"> 
-						<li><a class="icono header-socialmedia fa-brands fa-facebook-f" href="https://www.facebook.com/chowebogota" target="_blank"></a></li>						
-						<li> <a class="icono header-socialmedia fa-brands fa-instagram" href="https://www.instagram.com/chowebogota/?hl=en" target="_blank"></a></li>
-						<li><a class="icono header-socialmedia fa-brands fa-whatsapp" 
-							href="https://api.whatsapp.com/send?phone=%2B573108639952&fbclid=IwAR3c8nr6WIywLfARdfs7pBANK643L5-OaHM3gO7uxvIS_i-bE3UXo8XbKFo" 
-							target="_blank"></a>
-						</li>
-									
-					</ul>
-				</div>		
-		</header>
-		   
-		<main>
-			<section id="section1" class="body-First-Container">
-				<div class="Opacity-Effect"></div>
-					<div class="body-First-Content">						
-						<h1 id="cambiar" class="Titulo body-First-Tittle">¿chowá? <span class="Color-Chowe">Chowé!!</span></h1>
-						<h2 class="Subtitulo body-First-Par"> Alitas Artesanales con sabor a Casa</h2>
-						<a class="Button body-First-Button" href="#Menu">Ver Menú</a>
-					</div>					
-			</section>					 
-						
-			<section id="section2" class="body-Second-Content"> 
-				<div class="body-Second-Heading">
-					<h1 class="Titulo body-Second-Tittle">Bienvenidos a Chowé</h1>
-				</div>  
-				
-				<div class="body-Second-Elements">					
-					<div class="body-Second-Description">
-						<h2 class="Subtitulo body-Second-Par">¿Sabias Qué...?</h2>						
-						<h2 class="Subtitulo body-Third-Par">
-							 Chowé es una palabra Chibcha que significa "Estoy bien" ó "Estamos bien". <br>	
-							 <span>Nuestra misión es hacer las mejores alitas de pollo!. Nuestro menú está infuenciado por la cocina ancestral.<br>
-							 En Chowé queremos preservar nuestros sabores locales, creando experiencias únicas.</span>
-						</h2>
-											
-					</div>
-					<div class="body-Second-Media">
-						<div class="body-Second-Media__One">
-							<img class="body-Second-Img" src="./assets/Imagen/fondo1.jpg" alt="img-Media">
-							<img class="body-Second-Img" src="./assets/Imagen/2.JPG" alt="img-Media">							
-						</div>
+    <footer>
+      <div class="Footer-Container">
+        <div class="footer_Sec1">
+          <h3 class="Parrafo Siguenos">Síguenos en nuestras redes sociales</h3>
+          <ul class="redes-sociales">
+            <li>
+              <a
+                class="icono header-socialmedia fa-brands fa-facebook-f"
+                href="https://www.facebook.com/chowebogota"
+                target="_blank"
+              ></a>
+            </li>
+            <li>
+              <a
+                class="icono header-socialmedia fa-brands fa-instagram"
+                href="https://www.instagram.com/chowebogota/?hl=en"
+                target="_blank"
+              ></a>
+            </li>
+            <li>
+              <a
+                class="icono header-socialmedia fa-brands fa-whatsapp"
+                href="https://api.whatsapp.com/send?phone=%2B573108639952&fbclid=IwAR3c8nr6WIywLfARdfs7pBANK643L5-OaHM3gO7uxvIS_i-bE3UXo8XbKFo"
+                target="_blank"
+              ></a>
+            </li>
+          </ul>
+          <div class="footer_Sec1">
+            <h3 class="clausula">Política de Privacidad</h3>
+            <h3 class="clausula">Condiciones de Uso</h3>
+          </div>
+        </div>
+      </div>
 
-						<div class="body-Second-Media__Two">
-							<img class="body-Second-Img" src="./assets/Imagen/3.JPG" alt="img-Media">
-							<img class="body-Second-Img" src="./assets/Imagen/decoracion.jpeg" alt="img-Media">
-						</div> 
-					</div>				
-				</div>
+      <div class="Copyright">
+        <h6 class="copyright-text">
+          2023&copy; Chowé. Todos los derechos reservados.
+        </h6>
+      </div>
+    </footer>
 
-				<div class="cont-arrow">
-					<!--<span class="WhatsApp"><a id="Wp" class="icono header-socialmedia fa-brands fa-whatsapp" href="https://api.whatsapp.com/send?phone=%2B573108639952&fbclid=IwAR3c8nr6WIywLfARdfs7pBANK643L5-OaHM3gO7uxvIS_i-bE3UXo8XbKFo"
-						target="_blank"></a></span>-->					
-					<span class="spanArrowUp"><a id="arrowUp" class="fa-solid fa-angles-up" href="#" target="_top"></a></span>
-					<div id="Menu"></div>	
-				</div>			
-			</section>
-			
-			<section id="section3" class="body-Third-Content">
-				<div class="body-Third-Heading">
-					<h1 class="Titulo body-Third-Tittle espacio">Nuestro Menú</h1>
-					<h2 class=" Subtitulo ">Todos los días son días de alitas Chowé.</h2>
-				</div> 
-				
-				<div id="opcionesMenuContenedor" class="body-Third-Menu">
-					<button id="entradas" class="MenuOption" type="button" onclick="handleButtonOptionClick(id)">Entradas</button>						
-					<button id="combos" class="activo MenuOption" onclick="handleButtonOptionClick(id)">Combos</button>
-					<button id="salsas" class="MenuOption" onclick="handleButtonOptionClick(id)">Salsas</button>
-					<button id="bebidas" class="MenuOption" onclick="handleButtonOptionClick(id)">Bebidas</button>
-				</div>
-
-				<div class="body-Third-Menu-Wrapper">
-					<h2 id="esconderTexto" class="Subtitulo">Nuestros Combos vienen acompañados con Papas a la francesa y salsa de la casa</h2>
-
-					<div id="allTheFoodContainer">
-						
-						<ul id="allTheFood" class="food-List">
-							<script>getMenuItems('combos')</script>
-							
-						</ul>
-						
-					</div>					
-				</div>
-
-				<div class="body-Third-Button">
-					<a class="Button contenido-Boton" href="https://api.whatsapp.com/send?phone=%2B573108639952&fbclid=IwAR3c8nr6WIywLfARdfs7pBANK643L5-OaHM3gO7uxvIS_i-bE3UXo8XbKFo" 
-					target="_blank">¡ORDENA AQUÍ!</a>
-					
-				</div> 				
-			</section>
-
-			<section id="section4" class="body-Forth-Content">
-				<div class="body-Forth-Heading">
-					<h1 class="Titulo body-Forth-Tittle espacio">Nuestros Servicios</h1>
-				</div> 
-
-				<div class="body-Forth-Container">
-					<div class="Forth-Media uno">
-						<img class="Forth-Media-img" src="/assets/Imagen/cateringGrey.JPG" alt="img-services">
-						<h2 class="Subtitulo">Catering</h2>	
-						<h4 class="Parrafo">Atendemos las reuniones en tu empresa, eventos especiales, 
-							servicio a domicilio; Contáctanos y te enviamos tu cotización. </h4> 
-					</div> 
-
-					<div class="Forth-Media dos">
-						<img class="Forth-Media-img" src="/assets/Imagen/pickupblack.JPG" alt="img-services">
-						<h2 class="Subtitulo">Para Retirar</h2>	
-						<h4 class="Parrafo"> Estás cerca? Programa tu pedido con la opción de retirar en tienda y disfruta al instante de nuestros maravillosos productos.</h4> 
-					</div>
-
-					<div class="Forth-Media tres">
-						<img class="Forth-Media-img" src="/assets/Imagen/fastWatch.JPG" alt="img-services">
-						<h2 class="Subtitulo">Entrega Rapida</h2>	
-						<h4 class="Parrafo">En Chowé nos caracterizamos por la puntual rápida y efectiva entrega de nuestros pedidos a nuestros clientes. Anímate y pide el tuyo!</h4> 
-					</div>
-
-				</div>
-			</section> 
-
-			<section id="section5" class="body-Fifth-Content">			
-				<div class="body-Fifth-Heading">
-					<h1 class="Titulo body-Fifth-Tittle espacio">#EstoyBien #EstamosBien  #Chowé</h1>
-					<h2 class="Subtitulo body-Fifth-Par">Disfrutaste tu experiencia Chowé? Comparte tus momentos y comentarios con nosotros.</h2>
-				</div> 					
-
-				<div class="body-Fifth-Media-Container">
-
-					<i id="button-Next" class="fa-solid fa-angles-right" onclick="scrollRight()"></i></i>
-					<i id="button-Prev" class= "fa-solid fa-angles-left" onclick="leftScroll()"></i>			
-					
-					<div class="body-Fifth-Media">
-						<div class="Wrapper-Fifth-Media">
-							<div class="body-Fifth-Cont-Img"><img class="body-Fifth-Img" src="./assets/Imagen/Img(1).jpeg" alt="img-slider"/></div>
-							<div class="body-Fifth-Cont-Img"><img class="body-Fifth-Img" src="./assets/Imagen/Img(3).jpeg" alt="img-slider"/></div>
-							<div class="body-Fifth-Cont-Img"><img class="body-Fifth-Img" src="./assets/Imagen/Img(5).jpeg" alt="img-slider"/></div>
-							<div class="body-Fifth-Cont-Img"><img class="body-Fifth-Img" src="./assets/Imagen/1.JPG" alt="img-slider"/></div>
-							<div class="body-Fifth-Cont-Img"><img class="body-Fifth-Img" src="./assets/Imagen/2.JPG" alt="img-slider"/></div>
-							<div class="body-Fifth-Cont-Img"><img class="body-Fifth-Img" src="./assets/Imagen/3.JPG" alt="img-slider"/></div>							
-							<div class="body-Fifth-Cont-Img"><img class="body-Fifth-Img" src="./assets/Imagen/7.jpg" alt="img-slider"/></div>
-							<div class="body-Fifth-Cont-Img"><img class="body-Fifth-Img" src="./assets/Imagen/8.jpg" alt="img-slider"/></div>
-							<div class="body-Fifth-Cont-Img"><img class="body-Fifth-Img" src="./assets/Imagen/9.jpg" alt="img-slider"/></div>			
-						</div>
-						<div id="form"></div>					
-					</div>
-				</div>				
-			</section>
-
-			<section id="section6" class="body-sixth-Content">
-				<div class="body-sixth-Heading">
-					<h1 class="Titulo body-sixth-Tittle espacio">Contáctanos</h1>					
-				</div>
-
-				<div class="body-sixth-Wrapper">					
-
-					<div class="info-contact">	
-						<div class="body-sixth-map">										
-							<i id="cerrar" class="fa-solid fa-angles-down" onclick="ocultarMapa()"></i>					
-							<div id="Mapa"></div>						
-						</div>
-											
-						<h3>Celular</h3>
-						<h2>310-863-99-52</h2>
-						<h3>Correo Electrónico</h3>
-						<h2><a class="email" href="mailto:chowecolombia@gmail.com">chowecolombia@gmail.com</a></h2>
-						<h3>Ubicación</h3>
-						<i onclick="mostrarMapa()" class=" icon-map fa-solid fa-location-dot"></i>
-						<h2>Encuentranos en Google Maps</h2>
-						<h3>Bogotá, Colombia</h3>
-					</div>					
-
-					<div class="body-sixth-form">
-						<form id="formulario" class="form-wrapper" action="" method="post">
-							<label class="form_text" for="nombre">Nombre</label>
-							<input class="form_text campo-texto" type="text" id="nombre" name="nombre">
-
-							<label class="form_text" for="celular">Celular</label>
-							<input class="form_text campo-texto" type="text" id="ceular" name="celular">
-
-							<label class="form_text" for="correo">Correo Electrónico</label>
-							<input class="form_text campo-texto" type="text" id="correo" name="correo">
-
-							<label class="form_text" for="mensaje">Mensaje</label>
-							<textarea class="form_text campo-texto" id="mensaje" name="mensaje"></textarea>
-
-							<input class="form_text campo-enviar" value="Enviar" type="button" onclick="sendEmail()">
-						</form>
-					</div>
-				</div>
-			</section>			
-		</main>
-
-		<footer> 			
-			<div class="Footer-Container">
-				<div class="footer_Sec1">
-					<h3 class="Parrafo Siguenos">Síguenos en nuestras redes sociales</h3>
-					<ul class="redes-sociales"> 
-						<li><a class="icono header-socialmedia fa-brands fa-facebook-f" href="https://www.facebook.com/chowebogota" target="_blank"></a></li>						
-						<li> <a class="icono header-socialmedia fa-brands fa-instagram" href="https://www.instagram.com/chowebogota/?hl=en" target="_blank"></a></li>
-						<li><a class="icono header-socialmedia fa-brands fa-whatsapp" 
-							href="https://api.whatsapp.com/send?phone=%2B573108639952&fbclid=IwAR3c8nr6WIywLfARdfs7pBANK643L5-OaHM3gO7uxvIS_i-bE3UXo8XbKFo" 
-							target="_blank"></a></li>									
-					</ul>
-					<div class="footer_Sec1">
-						<h3 class="clausula">Política de Privacidad</h3>
-						<h3 class="clausula">Condiciones de Uso</h3>	
-					</div>
-				</div>				
-			</div>
-
-			<div class="Copyright">
-				<h6 class="copyright-text"> 2023&copy; Chowé. Todos los derechos reservados.</h6>
-			</div>			
-		</footer>	
-
-		
-	</body> 
+    <script src="/src/js/router.js"></script>
+  </body>
 </html>

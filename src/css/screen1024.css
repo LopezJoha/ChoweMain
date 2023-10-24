@@ -1,3 +1,15 @@
+:root{
+	--darkBlue: #383948;
+	--yellowChowe: #d5bf0f;
+	--white: #f5f5f5;
+	--black:black;
+	--grey: grey;
+    --justWhite: white;
+	--whatsapp: #25D366;
+}
+
+
+
 .Titulo{
     font-size: 8rem;
     line-height: 8rem;
@@ -9,13 +21,14 @@
     line-height: 12rem;	
 }
 
+/*
 .header-imagen {
     position: absolute;
     height: 18rem;
     width: 18rem;
     top: -.5rem;
     left: 6rem; 
-}
+}*/
 
 .body-Second-Par{
     margin-bottom: 2rem;
@@ -51,6 +64,7 @@
 #esconderTexto{
     padding: 2rem 0;
 }
+
 
 .body-Fifth-Par {
     margin: 2rem;

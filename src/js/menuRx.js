@@ -57,16 +57,21 @@ let currentValue;
 let cantidad; 
 
 store.subscribe(() => {
+  let total = 0; 
   const amount = store.getState(); 
   
+
   for(const [key, value] of Object.entries(amount)){
     cantidad = document.querySelector(`#${key}-counter`); 
-    if(cantidad){
-      currentValue = value.toString();
+    total += value 
+    if(cantidad){         
+      currentValue = value
       cantidad.innerHTML = currentValue;   
     }
   }
-
+  
+  document.getElementById('totalCart').innerHTML = total; 
+  
 });
 
 
