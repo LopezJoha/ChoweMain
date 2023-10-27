@@ -33,6 +33,7 @@ const urlRoutes = {
 
 // create a function that watches the url and calls the urlLocationHandler
 const urlRoute = (event) => {
+	
 	event = event || window.event; // get window.event if event argument not provided
 	event.preventDefault();
 	// window.history.pushState(state, unused, target link);

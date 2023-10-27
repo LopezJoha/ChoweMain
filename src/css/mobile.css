@@ -557,10 +557,10 @@ header{
 }
 
 .Wrapper-Fifth-Media {
-	position: relative;
+	/*position: relative;*/
 	z-index: 0;
     left: 4rem; 
-    width: 98vw;
+   /* width: 98vw;*/
     display: flex;
     height: auto;
     justify-content: left;
