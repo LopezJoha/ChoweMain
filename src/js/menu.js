@@ -1,4 +1,8 @@
+
+// Enlace a whatsapp 
+//https://api.whatsapp.com/send?phone=%2B573108639952&fbclid=IwAR3c8nr6WIywLfARdfs7pBANK643L5-OaHM3gO7uxvIS_i-bE3UXo8XbKFo
 // BASE DE DATOS
+
 var menuItems = {
   entradas: [
     {
@@ -109,6 +113,8 @@ function changeButtonClasses(buttonName) {
 
 
 function getMenuItems(opcionMenu) {
+
+ 
   let lista = document.getElementById("allTheFood");
 
   if (opcionMenu !== "combos") {
@@ -183,3 +189,7 @@ function mostrarTexto() {
 const handleButtonOptionClick = (id) => {
   getMenuItems(id, changeButtonClasses(id));  
 };
+
+function showConsole(){
+  console.log("Cart!")
+}

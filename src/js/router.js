@@ -4,8 +4,7 @@ const urlPageTitle = "";
 // create document click that watches the nav links only
 document.addEventListener("click", (e) => {
 	const { target } = e;
-	if (!target.matches("nav span")) {
-        console.log("ADDEVENTLISTENER")
+	if (!target.matches("nav span")) {        	
 		return;                
 	}
 	e.preventDefault();
@@ -33,7 +32,7 @@ const urlRoutes = {
 
 // create a function that watches the url and calls the urlLocationHandler
 const urlRoute = (event) => {
-	
+
 	event = event || window.event; // get window.event if event argument not provided
 	event.preventDefault();
 	// window.history.pushState(state, unused, target link);

@@ -45,7 +45,7 @@
     <link rel="shortcut icon" href="./assets/Imagen/Chowe2.ico" />
   </head>
 
-  <body>
+  <body onload="getMenuItems('combos')">
     <header>
       <img
         id="imagen-Header"
@@ -88,7 +88,7 @@
               class="Subtitulo nav-item"
               href="/cart"
               onclick="route()"
-            > Cart           
+            >
             </a>
             <div class="cartAmount"><p id="totalCart">0</p></div>
           </span>

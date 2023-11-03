@@ -869,6 +869,15 @@ footer{
 	height: 4.5rem;
 }
 
+#opc5{
+	width: 4rem;
+	height: 4rem;
+	background-image: url('../../assets/cart.png');
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: contain;
+}
+
 .cartAmount {
 	position: absolute;
 	top:0;
@@ -888,4 +897,9 @@ footer{
 
 #totalCart {
 	font-size: 1.8rem;
+}
+
+
+#shoppingCart{
+	
 }
