@@ -67,6 +67,24 @@ header{
 	transition: width 2s, height 2s, transform 2s;
 }
 
+@media screen and (max-width: 350px) {
+	.header-imagen{
+		display: none;
+	}
+
+	.body-Second-Media{
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+   	 	padding: 20px;
+	}	
+
+	#section4, #section5{
+		display: none;
+	}
+
+}
+
 .header-imagen:hover{
 	cursor: pointer; 
 	transform: rotate(360deg);
@@ -185,7 +203,7 @@ header{
 
 .Button{
 	text-decoration: none;
-	width: 14rem;
+	width: 70vw;	
 	padding: 0.5rem;
 	background-color: #d5bf0f;
 	border: solid #383948;
@@ -900,6 +918,32 @@ footer{
 }
 
 
-#shoppingCart{
+.shoppingCartContainer{
 	
+	width: 100vw;
+	min-height: 300px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.cartTitle{
+	font-weight: bolder;
+}
+
+
+.shoppingC {
+	height: 100%;
+	width: 100%;
+	display: flex;
+
+
+}
+
+.selectedItemsList{
+
+}
+
+.summary{
+
 }

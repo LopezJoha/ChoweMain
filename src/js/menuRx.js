@@ -8,9 +8,7 @@ const newSubstracting = (id)=>{
   store.dispatch(subs(id))
 }
 
-const initialAmount = {
-  
-};
+const initialAmount = {};
 
 const add = (param) => {
   return {
@@ -56,14 +54,23 @@ const store = Redux.createStore(reducer, );
 let currentValue; 
 let cantidad; 
 
+
+
 store.subscribe(() => {
   let total = 0; 
   const amount = store.getState(); 
+  console.log(amount);
+  
+  let li_Item;
   
 
   for(const [key, value] of Object.entries(amount)){
     cantidad = document.querySelector(`#${key}-counter`); 
     total += value 
+    li_Item = document.querySelector(`#li-${key}`);
+    console.log(li_Item);
+    
+    
     if(cantidad){         
       currentValue = value
       cantidad.innerHTML = currentValue;   
@@ -71,6 +78,8 @@ store.subscribe(() => {
   }
   
   document.getElementById('totalCart').innerHTML = total; 
+  
+  
   
 });
 

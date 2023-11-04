@@ -144,7 +144,7 @@ function getMenuItems(opcionMenu) {
       var obj = menuItems[opcionMenu][i];
       let counter = findingValue(obj.id)
       listaItems += `
-        <li class="food-List_element">
+        <li class="food-List_element" id="li-${obj.id}">
           <img src=${obj.imagen} class="img-list-element" />            
           <div class="List-element-one">
               <h1 class="titulo-menu">${obj.title}</h1>
@@ -190,6 +190,3 @@ const handleButtonOptionClick = (id) => {
   getMenuItems(id, changeButtonClasses(id));  
 };
 
-function showConsole(){
-  console.log("Cart!")
-}
