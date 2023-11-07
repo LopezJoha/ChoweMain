@@ -1,13 +1,32 @@
-
-
 <div class="shoppingCartContainer">
    <h2 class="cartTitle">Shopping Cart</h2>
 
    <div class="shoppingC" id="shoppingCart">
-      <ul class= "selectedItemsList" id="selectedItems">
 
-      </ul>
+      <div class= "selectedItemsList" id="selectedItemsL">
+
+      </div>   
+
+      <div class="shoppingResume">
+
+         <div class="summary">
+            <h2 class=" Subtitulo ">Resumen de la Orden</h2>
+            <p  class="Parrafo">Numero de articulos: <span id="totalArticulos" class="Parrafo"></span></p>
+            <hr style="width:90%;text-align:left;margin-left:0">
+            <p  class="Parrafo">Total: <span id="totalPrecio" class="Parrafo"></span></p>
+            
+            <div class="buttonContainerCart">
+               <button class="Button buttonCart">  
+                  <a class="sendOrder" href="https://api.whatsapp.com/send?phone=%2B573108639952&fbclid=IwAR3c8nr6WIywLfARdfs7pBANK643L5-OaHM3gO7uxvIS_i-bE3UXo8XbKFo" target="_blank">
+                     <img src="../assets/Imagen/whatsapp.png"/>
+                  </a>
+                  <p class="Parrafo">Envia tu Pedido</p>
+               </button>
+               
+               <p class="">Por favor envia tu orden para ser procesada por Whatsapp <span></span></p>
+            </div>
+         </div>
+      </div>
       
-      <div class="summary"></div>
    </div>
 </div>

@@ -102,7 +102,7 @@ header{
 
 .Button {
     width: 23rem;
-    padding: 1rem;  
+
 }
 
 .body-First-Button{
@@ -247,9 +247,28 @@ img.body-Fifth-Img {
     right: 1rem;
 }
 
+
+.shoppingCartContainer{
+    margin-top: 12rem; 
+}
+
+
+
+
+
 @media only screen and (min-width: 1000px){
     .body-sixth-Wrapper{
         display: inline-flex;
         flex-direction: row;             
     }    
+
+    .shoppingC{
+        flex-direction: row;
+        width: 100%;
+        justify-content: space-around;
+    }
+
+    .selectedItemsLis, .shoppingResumet{
+        width: 50%;
+    }
 }

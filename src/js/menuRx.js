@@ -1,86 +1,108 @@
+const newAdding = (button) => {
+  var objJSON = button.getAttribute("data-obj");
+  var obj = JSON.parse(objJSON);
+  store.dispatch(add(obj));
+};
 
-
-const newAdding =(id) => {
-  store.dispatch(add(id))
-}
-
-const newSubstracting = (id)=>{
-  store.dispatch(subs(id))
-}
+const newSubstracting = (button) => {
+  var objJSON = button.getAttribute("data-obj");
+  var obj = JSON.parse(objJSON);
+  store.dispatch(subs(obj));
+};
 
 const initialAmount = {};
 
-const add = (param) => {
+const add = (obj) => {
   return {
     type: "Add",
-    payload: param,
+    payload: {
+      Id: obj.id,
+      Nombre: obj.title,
+      Img: obj.imagen,
+      Price: obj.price,
+    },
   };
 };
 
-const subs = (param) => {
+const subs = (obj) => {
   return {
     type: "Subs",
-    payload: param,
+    payload: {
+      Id: obj.id,
+      Nombre: obj.title,
+      Img: obj.imagen,
+      Price: obj.price,
+    },
   };
 };
 
 const reducer = (state = initialAmount, action) => {
   if (action.type === "Add") {
     const copy = { ...state };
-    const val = copy[action.payload];
+    const val = copy[action.payload.Id];
+
     if (val) {
-      copy[action.payload] = copy[action.payload] + 1;
+      copy[action.payload.Id] = {
+        ...action.payload,
+        amount: copy[action.payload.Id].amount + 1,
+      };
     } else {
-      copy[action.payload] = 1;
+      copy[action.payload.Id] = {
+        ...action.payload,
+        amount: 1,
+      }
+      
     }
     return copy;
   } else if (action.type === "Subs") {
     const copy = { ...state };
-    const val = copy[action.payload];
+    const val = copy[action.payload.Id];
+
     if (val) {
-      copy[action.payload] = copy[action.payload] - 1;
+      if(copy[action.payload.Id].amount === 1){
+        delete copy[action.payload.Id];
+      } else {
+        copy[action.payload.Id] = {
+          ...action.payload,
+          amount: copy[action.payload.Id].amount - 1,
+        };
+      }
     } else {
-      copy[action.payload] = 0; 
+      // do nothing
     }
     return copy;
-  }  
-  else {
+  } else {
     return state;
   }
 };
 
-const store = Redux.createStore(reducer, );
+const store = Redux.createStore(reducer);
 
-let currentValue; 
-let cantidad; 
-
-
+// everytime the store changes, iterate over all the food options and check if theyre on the screen
+// if theyre on the screen, iterate over state and see if its in there
+// if it is, update the innerHTML
+// im aware this isnt very efficient code, but its fine for something small like this
 
 store.subscribe(() => {
-  let total = 0; 
-  const amount = store.getState(); 
-  console.log(amount);
-  
-  let li_Item;
-  
-
-  for(const [key, value] of Object.entries(amount)){
-    cantidad = document.querySelector(`#${key}-counter`); 
-    total += value 
-    li_Item = document.querySelector(`#li-${key}`);
-    console.log(li_Item);
-    
-    
-    if(cantidad){         
-      currentValue = value
-      cantidad.innerHTML = currentValue;   
+  let total = 0;
+  const state = store.getState();
+  const array = Object.values(menuItems);
+  for(let i = 0; i < array.length; i++){
+    for(let j = 0; j < array[i].length; j++) {
+      const val = array[i][j];
+      let cantidadElement = document.querySelector(`#${val.id}-counter`);
+      if(cantidadElement){
+        let stateProperty = state[val.id];
+        if(stateProperty){
+          const amount = state[val.id].amount;
+          cantidadElement.innerHTML = amount;
+          total += amount;
+        } else {
+          cantidadElement.innerHTML = 0;
+        }
+      }
     }
   }
-  
-  document.getElementById('totalCart').innerHTML = total; 
-  
-  
-  
+
+  document.getElementById("totalCart").innerHTML = total;
 });
-
-

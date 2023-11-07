@@ -1,7 +1,6 @@
-
-// Enlace a whatsapp 
+// Enlace a whatsapp
 //https://api.whatsapp.com/send?phone=%2B573108639952&fbclid=IwAR3c8nr6WIywLfARdfs7pBANK643L5-OaHM3gO7uxvIS_i-bE3UXo8XbKFo
-// BASE DE DATOS
+
 
 var menuItems = {
   entradas: [
@@ -17,33 +16,34 @@ var menuItems = {
     {
       id: "combo1",
       imagen: "/assets/Small/small1.jpg",
-      title: `<span id="numeroAlitas">08</span><span class="alitas">&nbsp;Alitas</span>`,
+      title: `08 Alitas`,
       par: "Bañadas en 1 salsa",
       price: 15900,
     },
     {
       id: "combo2",
       imagen: "/assets/Small/small2.jpg",
-      title: `<span id="numeroAlitas">16</span><span class="alitas">&nbsp;Alitas</span>`,
+      title: `16 Alitas`,
       par: "Bañadas en 2 salsas",
       price: 27900,
     },
     {
       id: "combo3",
       imagen: "/assets/Small/small3.jpg",
-      title: `<span id="numeroAlitas">24</span><span class="alitas">&nbsp;Alitas</span>`,
+      title: `24 Alitas`,
       par: "Bañadas en 3 salsas",
       price: 37900,
     },
     {
       id: "combo4",
       imagen: "/assets/Small/small4.jpg",
-      title: `<span id="numeroAlitas">32</span><span class="alitas">&nbsp;Alitas</span>`,
+      title: `32 Alitas`,
       par: "Bañadas en 4 salsas",
       price: 47900,
     },
   ],
   salsas: [
+    // Todo Ajustar las propiedades del objeto, deben ser iguales a los objetos de arriba!!
     {
       id: "bbqChowe",
       nombre: "Bbq Chowé",
@@ -111,10 +111,7 @@ function changeButtonClasses(buttonName) {
   }
 }
 
-
 function getMenuItems(opcionMenu) {
-
- 
   let lista = document.getElementById("allTheFood");
 
   if (opcionMenu !== "combos") {
@@ -125,24 +122,23 @@ function getMenuItems(opcionMenu) {
 
   let listaItems = "";
 
+  let currentValue = store.getState();
 
-  let currentValue = store.getState(); 
-  
-  function findingValue(id){
-    var result; 
-    if(currentValue[id]){
-      console.log(currentValue[id])
-      result = currentValue[id]
-    }else{
-      result= 0
+  function findingValue(id) {
+    var result;
+    if (currentValue[id]) {
+      result = currentValue[id].amount;
+    } else {
+      result = 0;
     }
-    return result; 
+    return result;
   }
-  
+
   if (opcionMenu !== "salsas") {
-    for (let i = 0; i < menuItems[opcionMenu].length; i++){
+    for (let i = 0; i < menuItems[opcionMenu].length; i++) {
       var obj = menuItems[opcionMenu][i];
-      let counter = findingValue(obj.id)
+      let counter = findingValue(obj.id);
+      
       listaItems += `
         <li class="food-List_element" id="li-${obj.id}">
           <img src=${obj.imagen} class="img-list-element" />            
@@ -151,10 +147,10 @@ function getMenuItems(opcionMenu) {
               <p class="parrafo-menu">${obj.par}</p>
               <p class="parrafo-menu">$${obj.price}</p>  
           </div>
-          <div id="${obj.id}" class="buttonsContainer">             
-            <button id="${obj.id}" class="button__foodList menos" onclick="newSubstracting(id)">-</button>                
-            <div id="${obj.id}-counter" class="parrafo-menu">${counter}</div>
-            <button id="${obj.id}" class="button__foodList mas" onclick="newAdding(id)">+</button>
+          <div id="${obj.id}" class="buttonsContainer"> 
+            <button id="${obj.id}" class="button__foodList menos" data-obj='${JSON.stringify(obj)}' onclick="newSubstracting(this)">-</button>            
+              <div id="${obj.id}-counter" class="parrafo-menu">${counter}</div>           
+            <button id="${obj.id}" class="button__foodList mas" data-obj='${JSON.stringify(obj)}' onclick="newAdding(this)">+</button> 
           <div> 
         </li>
         
@@ -187,6 +183,5 @@ function mostrarTexto() {
 }
 
 const handleButtonOptionClick = (id) => {
-  getMenuItems(id, changeButtonClasses(id));  
+  getMenuItems(id, changeButtonClasses(id));
 };
-

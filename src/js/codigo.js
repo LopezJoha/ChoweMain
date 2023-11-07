@@ -27,13 +27,11 @@ function ocultarMapa(){
 };
 
 function leftScroll(){
-    console.log("LEFT")
     var left = document.querySelector(".Wrapper-Fifth-Media");
     left.scrollBy(-SHIFT_SIZE,0);
 };
 
 function scrollRight(){
-    console.log("RIGHT")
     var right = document.querySelector(".Wrapper-Fifth-Media");
     right.scrollBy(SHIFT_SIZE,0);
 };
