@@ -64,7 +64,8 @@ header {
 }
 
 @media screen and (max-width: 375px) {
-  .header-imagen, .hide {
+  .header-imagen,
+  .hide {
     display: none;
   }
 
@@ -79,8 +80,12 @@ header {
   #section5 {
     display: none;
   }
-  .imgCart{
+  .imgCart {
     display: none;
+  }
+
+  .summary {
+    width: 95vw;
   }
 }
 
@@ -202,12 +207,10 @@ header {
 
 .Button {
   text-decoration: none;
-  width: 70vw;
-  
+
   background-color: #d5bf0f;
   border: solid #383948;
   border-radius: 40px;
-  
   text-align: center;
   font-family: "Arima Madurai", cursive;
   font-size: 1.8rem;
@@ -916,13 +919,13 @@ footer {
 }
 
 .shoppingCartContainer {
-  
-  margin-top: 4rem;
+  margin-top: 5rem;
   max-width: 97vw;
-  min-height: 300px;
+
   display: flex;
   flex-direction: column;
   align-items: center;
+  gap: 3rem;
 }
 
 .cartTitle {
@@ -934,25 +937,28 @@ footer {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center;
+  align-content: center;
   gap: 20px;
-  padding: 2rem;
+}
+
+.shoppingResume {
+  width: 100%;
+  display: flex;
+  justify-content: center;
 }
 
 .summary {
   box-shadow: 0 4px 8px rgba(89, 73, 30, 0.16);
   border: solid 1px var(--darkBlue);
   border-radius: 15px;
-  min-width: 20vw;
-  min-height: 20vw;
+  max-width: 40%;
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 10px;
 }
 
 .selectedItemsList {
-  width: 100%;
+  max-width: 600px;
   box-shadow: 0 4px 8px rgba(89, 73, 30, 0.16);
   border: solid 1px var(--darkBlue);
   border-radius: 15px;
@@ -963,7 +969,7 @@ footer {
   list-style: none;
 }
 
-.shoppingResume{
+.shoppingResume {
   width: 100%;
 }
 
@@ -974,7 +980,7 @@ footer {
   align-items: center;
 }
 
-.buttonCart{
+.buttonCart {
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -992,28 +998,26 @@ footer {
   justify-content: center;
 }
 
-.cartTable{
+.cartTable {
   table-layout: fixed;
   width: 100%;
-  
 }
 
-th, td {
+th,
+td {
   padding: 2px;
   text-align: center;
-  
 }
 
-.productCart{
+.productCart {
   border: var(--darkBlue) 1.5px solid;
 }
 
-.imgCart{
+.imgCart {
   width: 7rem;
   height: 7rem;
 }
 
-
-.pCartContainer{
+.pCartContainer {
   display: flex;
 }
