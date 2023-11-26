@@ -207,7 +207,7 @@ header {
 
 .Button {
   text-decoration: none;
-
+  padding: 5px 15px; 
   background-color: #d5bf0f;
   border: solid #383948;
   border-radius: 40px;

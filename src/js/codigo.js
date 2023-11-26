@@ -35,3 +35,16 @@ function scrollRight(){
     var right = document.querySelector(".Wrapper-Fifth-Media");
     right.scrollBy(SHIFT_SIZE,0);
 };
+
+function scrollToSection(id) {
+
+    var element = document.getElementById(`${id}`);
+    console.log(id)
+    var bodyRect = document.body.getBoundingClientRect();
+    var elementRect = element.getBoundingClientRect();
+    var offset = elementRect.top - bodyRect.top;
+    window.scrollTo({
+        top: offset,
+        behavior: 'smooth'
+    });
+}
