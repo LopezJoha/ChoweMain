@@ -82,30 +82,32 @@ function generateCartHtmlFromState() {
   var item = Object.values(state);
   console.log(item);
   let cartItems = `				
-				<table class="cartTable">
-					<tr>
-            <th class="Subtitulo hide"></th>
-						<th class="Subtitulo">Prod</th>
-						<th class="Subtitulo">Cant</th>
-						<th class="Subtitulo">Precio</th>
-            <th class="Subtitulo">Total</th>
-					</tr>`;
+				
+					<div class="titleContainerTable" >
+						<p class="Subtitulo double">Prod</p>
+						<p class="Subtitulo small">Cant</p>
+						<p class="Subtitulo small">Precio</p>
+            <p class="Subtitulo small">Total</p>
+					</div>`;
 
   for (var i = 0; i < item.length; i++) {
     const itemTotalPrice = item[i]["Price"] * item[i]["amount"];
     totalAmount += item[i]["amount"];
     totalPrice += itemTotalPrice;
-    cartItems += `			
-					<tr class="productCart">
-            <td class="hide"> <img src="${item[i]["Img"]}" alt="imgCart" class="imgCart"/> </td> 
-						<td class="Parrafo">${item[i]["Nombre"]}</td>
-						<td class="Parrafo">${item[i]["amount"]}</td>
-						<td class="Parrafo">$${item[i]["Price"]}</td>
-            <td class="Parrafo">$${itemTotalPrice}</td>
-					</tr> 
+    cartItems += `
+          <hr>			
+					<div class="productCart">
+            <span class="small cartImgContainer"> 
+              <img src="${item[i]["Img"]}" alt="imgCart" class="imgCart hide "/>
+              <p class="Parrafo">${item[i]["Nombre"]}</p>
+            </span> 
+						<p class="Parrafo small">${item[i]["amount"]}</p>
+						<p class="Parrafo small">$${item[i]["Price"]}</p>
+            <p class="Parrafo small">$${itemTotalPrice}</p>
+					</div> 
 			`;
   }
-  cartItems += `</table>`;
+  cartItems += `</div>`;
 
   document.getElementById("totalArticulos").innerHTML = totalAmount;
   document.getElementById("totalPrecio").innerHTML = `$${totalPrice}`;

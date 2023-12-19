@@ -38,9 +38,10 @@ function scrollRight(){
 
 function scrollToSection(id) {
 
-    var element = document.getElementById(`${id}`);
-    console.log(id)
+    var element = document.getElementById(id);
+    
     var bodyRect = document.body.getBoundingClientRect();
+    console.log(bodyRect);
     var elementRect = element.getBoundingClientRect();
     var offset = elementRect.top - bodyRect.top;
     window.scrollTo({

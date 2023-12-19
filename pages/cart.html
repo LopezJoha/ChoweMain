@@ -1,26 +1,28 @@
 <div class="shoppingCartContainer">
-  <h2 class="cartTitle">Shopping Cart</h2>
+  <h2 class="cartTitle">Cart</h2>
 
   <div class="shoppingC" id="shoppingCart">
-    <div class="selectedItemsList" id="selectedItemsL"></div>
+    <div class="selectedItemsList" id="selectedItemsL">
+
+    </div>
 
     <div class="shoppingResume">
       <div class="summary">
-        <table>
-          <caption class="Subtitulo">
+        
+          <p class="Subtitulo">
             Resumen de la Orden
-          </caption>
+          </p>
+          <hr>
+          <span class="summary_span">
+            <p class="Parrafo">Total articulos:</p>
+            <p id="totalArticulos" class="Parrafo"></p>
+          </span>
 
-          <tr>
-            <td class="Parrafo">Numero de articulos:</td>
-            <td id="totalArticulos" class="Parrafo"></td>
-          </tr>
-
-          <tr>
-            <td class="Parrafo">Total:</td>
-            <td id="totalPrecio" class="Parrafo"></td>
-          </tr>
-        </table>
+          <span class="summary_span">
+            <p class="Parrafo">Total:</p>
+            <p id="totalPrecio" class="Parrafo"></p>
+          </span>
+        
 
         <div class="buttonContainerCart">
           <button class="Button buttonCart">
@@ -29,13 +31,14 @@
               href="https://api.whatsapp.com/send?phone=%2B573108639952&fbclid=IwAR3c8nr6WIywLfARdfs7pBANK643L5-OaHM3gO7uxvIS_i-bE3UXo8XbKFo"
               target="_blank"
             >
-              <img src="../assets/Imagen/whatsapp.png" />
+              <img src="../assets/Imagen/whatsapp.png"  class="sendImg"/>
             </a>
             <p class="Parrafo">Envia tu Pedido</p>
           </button>
 
           <p class="">Tu orden sera procesada por WhatsApp <span></span></p>
         </div>
+        
       </div>
     </div>
   </div>
