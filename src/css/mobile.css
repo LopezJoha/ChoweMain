@@ -101,7 +101,7 @@ header {
   top: 0.6rem;
   right: 2rem;
   z-index: 100;
-  color: whitesmoke;
+  color: var(--black);
   cursor: pointer;
 }
 
@@ -489,8 +489,7 @@ header {
   display: flex;
   justify-content: center;
   align-items: center;
-  padding-top: 1rem;
-  padding-bottom: 3rem;
+  padding: 3rem; 
 }
 
 .body-Forth-Container {
@@ -641,8 +640,7 @@ header {
 }
 
 .body-sixth-Heading {
-  margin-top: 2rem;
-  padding-top: 2rem;
+  
 }
 
 .body-sixth-Wrapper {
