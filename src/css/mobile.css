@@ -381,11 +381,11 @@ header {
 }
 
 .MenuOption {
-  background-color: white;
+  background-color: transparent;
   border: none;
   width: 12rem;
   padding: 0.5rem;
-  border: solid white;
+  
   font-family: "Arima Madurai", cursive;
   font-size: 2rem;
   color: #383948;

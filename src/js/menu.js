@@ -1,6 +1,17 @@
 // Enlace a whatsapp
 //https://api.whatsapp.com/send?phone=%2B573108639952&fbclid=IwAR3c8nr6WIywLfARdfs7pBANK643L5-OaHM3gO7uxvIS_i-bE3UXo8XbKFo
 
+function desplazar(id){
+  var element = document.getElementById(`${id}`);
+  var rect = element.getBoundingClientRect();
+  var x = rect.left + window.scrollX;
+  var y = rect.top + window.scrollY;
+  window.scrollTo({
+    top: y -100, 
+    left: x, 
+    behavior: 'smooth'
+  });
+}
 
 var menuItems = {
   entradas: [
