@@ -27,6 +27,7 @@ const urlRoutes = {
     title: "Cart" + urlPageTitle,
     description: "This is the about page",
   },
+  
 };
 
 // create a function that watches the url and calls the urlLocationHandler

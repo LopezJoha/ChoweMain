@@ -6,7 +6,7 @@
     <meta name="robots" content="index,follow" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <link rel="stylesheet" type="text/css" href="/src/css/normalize.css"/>
+    <link rel="stylesheet" type="text/css" href="/src/css/normalize.css" />
     <link rel="stylesheet" type="text/css" href="/src/css/mobile.css" />
     <link
       rel="stylesheet"
@@ -67,13 +67,10 @@
             </a>
           </span>
 
-          <span><a
-              id="opc2"
-              class="Subtitulo nav-item"
-              href="#Menu"
-              >Menú</a
-            ></span
-          >
+          <span>
+            <div id="opc2" class="Subtitulo nav-item" onclick="desplazarMenu()">Menu</div>
+          </span>
+
           <span
             ><a
               id="opc3"
@@ -83,10 +80,9 @@
               >Domicilios</a
             ></span
           >
-          <span
-            ><a id="opc4" class="Subtitulo nav-item" href="#section6"
-              >Contacto</a
-            ></span
+          <span>
+            <div id="opc4" class="Subtitulo nav-item" onclick="desplazarContacto()">Contacto</div>
+            </span
           >
           <span class="cart">
             <a
@@ -101,9 +97,7 @@
         </nav>
       </div>
     </header>
-    <div id="content">
-      
-    </div>
+    <div id="content"></div>
 
     <footer>
       <div class="Footer-Container">
@@ -147,4 +141,9 @@
 
     <script src="/src/js/router.js"></script>
   </body>
+  <script>
+
+    
+
+  </script>
 </html>

@@ -552,6 +552,7 @@ header {
 
 .body-Fifth-Tittle {
   margin-top: 2rem;
+  max-width: 90%;
 }
 
 .body-Fifth-Par {

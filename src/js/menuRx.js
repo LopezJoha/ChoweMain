@@ -1,3 +1,29 @@
+function desplazarMenu(){
+  var element = document.getElementById("section2");
+  var rect = element.getBoundingClientRect();
+  var x = rect.left + window.scrollX;
+  var y = rect.bottom + window.scrollY;
+  window.scrollTo({
+    top: y-100, 
+    left: x, 
+    behavior: 'smooth'
+  });
+}
+
+function desplazarContacto(){
+  var element = document.getElementById("form");
+  var rect = element.getBoundingClientRect();
+  var x = rect.left + window.scrollX;
+  var y = rect.top + window.scrollY;
+  window.scrollTo({
+    top: y-100, 
+    left: x, 
+    behavior: 'smooth'
+  });
+}
+
+
+
 const newAdding = (button) => {
   var objJSON = button.getAttribute("data-obj");
   var obj = JSON.parse(objJSON);

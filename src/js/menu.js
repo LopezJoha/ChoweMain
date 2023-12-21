@@ -172,14 +172,17 @@ function getMenuItems(opcionMenu) {
   }
 }
 
+
 function esconderTexto() {
+  /*
   document.getElementById("esconderTexto").style.visibility = "hidden";
-  document.getElementById("esconderTexto").style.height = "0";
+  document.getElementById("esconderTexto").style.height = "0";*/
 }
 
 function mostrarTexto() {
+  /*
   document.getElementById("esconderTexto").style.visibility = "visible";
-  document.getElementById("esconderTexto").style.height = "auto";
+  document.getElementById("esconderTexto").style.height = "auto";*/
 }
 
 const handleButtonOptionClick = (id) => {
