@@ -42,6 +42,7 @@ header {
 }
 
 .navBar {
+    margin-right: 2rem;
   height: 100%;
   color: white;
   z-index: 100;
@@ -83,6 +84,7 @@ header {
 .imgCart {
   height: 6rem;
   width: 6rem;
+  
 }
 
 .body-First-Tittle {
@@ -99,6 +101,7 @@ header {
 }
 
 .Button {
+    
 }
 
 .body-First-Button {
@@ -133,6 +136,7 @@ header {
   display: flex;
   flex-direction: row;
   justify-content: center;
+  margin: 2rem;
 }
 
 .body-Second-Description {
@@ -152,8 +156,9 @@ header {
 }
 
 .body-Third-Menu {
-  max-width: 52.5rem;
+  max-width: 57rem;
   margin: 1.5rem 0;
+  margin: 3.5rem;
 }
 
 .MenuOption {

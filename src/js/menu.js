@@ -1,15 +1,15 @@
 // Enlace a whatsapp
 //https://api.whatsapp.com/send?phone=%2B573108639952&fbclid=IwAR3c8nr6WIywLfARdfs7pBANK643L5-OaHM3gO7uxvIS_i-bE3UXo8XbKFo
 
-function desplazar(id){
+function desplazar(id) {
   var element = document.getElementById(`${id}`);
   var rect = element.getBoundingClientRect();
   var x = rect.left + window.scrollX;
   var y = rect.top + window.scrollY;
   window.scrollTo({
-    top: y -100, 
-    left: x, 
-    behavior: 'smooth'
+    top: y - 100,
+    left: x,
+    behavior: "smooth",
   });
 }
 
@@ -122,9 +122,12 @@ function changeButtonClasses(buttonName) {
   }
 }
 
-function getMenuItems(opcionMenu) {
-  let lista = document.getElementById("allTheFood");
+let currentCategory = null;
 
+function getMenuItems(opcionMenu) {
+  
+  let lista = document.getElementById("allTheFood");
+  
   if (opcionMenu !== "combos") {
     esconderTexto();
   } else {
@@ -149,7 +152,7 @@ function getMenuItems(opcionMenu) {
     for (let i = 0; i < menuItems[opcionMenu].length; i++) {
       var obj = menuItems[opcionMenu][i];
       let counter = findingValue(obj.id);
-      
+
       listaItems += `
         <li class="food-List_element" id="li-${obj.id}">
           <img src=${obj.imagen} class="img-list-element" />            
@@ -159,9 +162,19 @@ function getMenuItems(opcionMenu) {
               <p class="parrafo-menu">$${obj.price}</p>  
           </div>
           <div id="${obj.id}" class="buttonsContainer"> 
-            <button id="${obj.id}" class="button__foodList menos" data-obj='${JSON.stringify(obj)}' onclick="newSubstracting(this)">-</button>            
-              <div id="${obj.id}-counter" class="parrafo-menu">${counter}</div>           
-            <button id="${obj.id}" class="button__foodList mas" data-obj='${JSON.stringify(obj)}' onclick="newAdding(this)">+</button> 
+            <button id="${
+              obj.id
+            }" class="button__foodList menos" data-obj='${JSON.stringify(
+        obj
+      )}' onclick="newSubstracting(this)">-</button>            
+              <div id="${
+                obj.id
+              }-counter" class="parrafo-menu">${counter}</div>           
+            <button id="${
+              obj.id
+            }" class="button__foodList mas" data-obj='${JSON.stringify(
+        obj
+      )}' onclick="newAdding(this)">+</button> 
           <div> 
         </li>
         
@@ -182,7 +195,6 @@ function getMenuItems(opcionMenu) {
     lista.innerHTML = listaItems;
   }
 }
-
 
 function esconderTexto() {
   /*

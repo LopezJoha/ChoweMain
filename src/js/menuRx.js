@@ -107,3 +107,4 @@ store.subscribe(() => {
 
   document.getElementById("totalCart").innerHTML = total;
 });
+
