@@ -42,7 +42,7 @@ header {
 }
 
 .navBar {
-    margin-right: 2rem;
+  margin-right: 2rem;
   height: 100%;
   color: white;
   z-index: 100;
@@ -84,7 +84,6 @@ header {
 .imgCart {
   height: 6rem;
   width: 6rem;
-  
 }
 
 .body-First-Tittle {
@@ -101,7 +100,6 @@ header {
 }
 
 .Button {
-    
 }
 
 .body-First-Button {
@@ -203,12 +201,12 @@ header {
   font-size: 2.5rem;
 }
 
-.body-Third-Button{
-    padding: 5rem;
+.body-Third-Button {
+  padding: 5rem;
 }
 
-.contenido-Boton{
-    padding: 1rem;
+.contenido-Boton {
+  padding: 1rem;
 }
 
 .Forth-Media {
@@ -250,10 +248,12 @@ a {
 }
 
 #button-Prev {
+  display: flex;
   left: 1rem;
 }
 
 #button-Next {
+  display: flex;
   right: 1rem;
 }
 
@@ -261,55 +261,47 @@ a {
   margin-top: 14rem;
 }
 
-.shoppingC{
-    width: 100%;
+.shoppingC {
+  width: 100%;
 }
 
-.selectedItemsList{
-    width: 80%;
+.selectedItemsList {
+  width: 80%;
 }
 
-.hide{
-    display: flex;
+.hide {
+  display: flex;
 }
 
-
-.cartImgContainer{
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
+.cartImgContainer {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
 }
 
 .imgCart + .Parrafo {
-    margin-left: 1.5rem;
+  margin-left: 1.5rem;
 }
 
 @media only screen and (min-width: 700px) {
-
-
   .selectedItemsList {
-    
     justify-content: flex-end;
     align-content: center;
   }
-  
-  .productCart{
+
+  .productCart {
     padding: 2.5rem;
   }
 
   .shoppingResume {
-
     justify-content: center;
   }
 
-  .titleContainerTable{
+  .titleContainerTable {
     padding-bottom: 2.5rem;
   }
 }
-
-
-
 
 @media only screen and (min-width: 1000px) {
   .body-sixth-Wrapper {
@@ -324,11 +316,11 @@ a {
     justify-content: center;
   }
 
-  .summary{
+  .summary {
     justify-self: flex-start;
   }
 
-  .selectedItemsList{
+  .selectedItemsList {
     max-width: 50%;
   }
 
