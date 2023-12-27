@@ -2,7 +2,7 @@
 //https://api.whatsapp.com/send?phone=%2B573108639952&fbclid=IwAR3c8nr6WIywLfARdfs7pBANK643L5-OaHM3gO7uxvIS_i-bE3UXo8XbKFo
 
 function desplazar(id) {
-  startMenu()
+  startMenu();
   var element = document.getElementById(`${id}`);
   var rect = element.getBoundingClientRect();
   var x = rect.left + window.scrollX;
@@ -89,21 +89,21 @@ var menuItems = {
     {
       id: "bebida1",
       imagen: "/assets/Imagen/400ml.jpg",
-      title: "Gaseosa&nbsp;400ml",
+      title: "Manz.&nbsp;400ml",
       par: "Productos Postobón",
       price: 2500,
     },
     {
       id: "bebida2",
       imagen: "/assets/Imagen/1500l.jpg",
-      title: "Gaseosa&nbsp;1.5L",
+      title: "Colomb.&nbsp;1.5L",
       par: "Productos Postobón",
       price: 4000,
     },
     {
       id: "bebida3",
       imagen: "/assets/Imagen/3125l.jpg",
-      title: "Gaseosa&nbsp;3.125L",
+      title: "Pepsi.&nbsp;3.125L",
       par: "Productos Postobón",
       price: 6000,
     },
@@ -125,17 +125,14 @@ function changeButtonClasses(buttonName) {
 
 let currentCategory = null;
 
-
 function getMenuItems(opcionMenu) {
-  
   let lista = document.getElementById("allTheFood");
-  
+
   if (opcionMenu !== "combos") {
     esconderTexto();
   } else {
     mostrarTexto();
   }
-  
 
   let listaItems = "";
 
@@ -150,14 +147,12 @@ function getMenuItems(opcionMenu) {
     }
     return result;
   }
- 
 
   if (opcionMenu !== "salsas") {
-
-    for (let i = 0; i < menuItems[opcionMenu].length; i++){
+    for (let i = 0; i < menuItems[opcionMenu].length; i++) {
       var obj = menuItems[opcionMenu][i];
       let counter = findingValue(obj.id);
-      
+
       listaItems += `
         <li class="food-List_element" id="li-${obj.id}">
           <img src=${obj.imagen} class="img-list-element" />            
@@ -167,20 +162,27 @@ function getMenuItems(opcionMenu) {
               <p class="parrafo-menu">$${obj.price}</p>  
           </div>
           <div id="${obj.id}" class="buttonsContainer"> 
-            <button id="${obj.id}" class="button__foodList menos" data-obj='${JSON.stringify(obj)}' onclick="newSubstracting(this)">-</button>            
-              <div id="${obj.id}-counter" class="parrafo-menu">${counter}</div>           
-            <button id="${obj.id}" class="button__foodList mas" data-obj='${JSON.stringify(obj)}' onclick="newAdding(this)">+</button> 
+            <button id="${
+              obj.id
+            }" class="button__foodList menos" data-obj='${JSON.stringify(
+        obj
+      )}' onclick="newSubstracting(this)">-</button>            
+              <div id="${
+                obj.id
+              }-counter" class="parrafo-menu">${counter}</div>           
+            <button id="${
+              obj.id
+            }" class="button__foodList mas" data-obj='${JSON.stringify(
+        obj
+      )}' onclick="newAdding(this)">+</button> 
           <div> 
         </li>`;
     }
 
-
-    if(lista){
+    if (lista) {
       lista.innerHTML = listaItems;
-    }else{
-      
+    } else {
     }
-
   } else {
     for (let i = 0; i < menuItems[opcionMenu].length; i++) {
       var obj = menuItems[opcionMenu][i];
@@ -195,7 +197,7 @@ function getMenuItems(opcionMenu) {
   }
 }
 
-function startMenu(){
+function startMenu() {
   getMenuItems("combos");
 }
 
