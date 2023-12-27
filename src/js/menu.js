@@ -2,6 +2,7 @@
 //https://api.whatsapp.com/send?phone=%2B573108639952&fbclid=IwAR3c8nr6WIywLfARdfs7pBANK643L5-OaHM3gO7uxvIS_i-bE3UXo8XbKFo
 
 function desplazar(id) {
+  startMenu()
   var element = document.getElementById(`${id}`);
   var rect = element.getBoundingClientRect();
   var x = rect.left + window.scrollX;
@@ -124,6 +125,7 @@ function changeButtonClasses(buttonName) {
 
 let currentCategory = null;
 
+
 function getMenuItems(opcionMenu) {
   
   let lista = document.getElementById("allTheFood");
@@ -133,6 +135,7 @@ function getMenuItems(opcionMenu) {
   } else {
     mostrarTexto();
   }
+  
 
   let listaItems = "";
 
@@ -147,12 +150,14 @@ function getMenuItems(opcionMenu) {
     }
     return result;
   }
+ 
 
   if (opcionMenu !== "salsas") {
-    for (let i = 0; i < menuItems[opcionMenu].length; i++) {
+
+    for (let i = 0; i < menuItems[opcionMenu].length; i++){
       var obj = menuItems[opcionMenu][i];
       let counter = findingValue(obj.id);
-
+      
       listaItems += `
         <li class="food-List_element" id="li-${obj.id}">
           <img src=${obj.imagen} class="img-list-element" />            
@@ -162,38 +167,36 @@ function getMenuItems(opcionMenu) {
               <p class="parrafo-menu">$${obj.price}</p>  
           </div>
           <div id="${obj.id}" class="buttonsContainer"> 
-            <button id="${
-              obj.id
-            }" class="button__foodList menos" data-obj='${JSON.stringify(
-        obj
-      )}' onclick="newSubstracting(this)">-</button>            
-              <div id="${
-                obj.id
-              }-counter" class="parrafo-menu">${counter}</div>           
-            <button id="${
-              obj.id
-            }" class="button__foodList mas" data-obj='${JSON.stringify(
-        obj
-      )}' onclick="newAdding(this)">+</button> 
+            <button id="${obj.id}" class="button__foodList menos" data-obj='${JSON.stringify(obj)}' onclick="newSubstracting(this)">-</button>            
+              <div id="${obj.id}-counter" class="parrafo-menu">${counter}</div>           
+            <button id="${obj.id}" class="button__foodList mas" data-obj='${JSON.stringify(obj)}' onclick="newAdding(this)">+</button> 
           <div> 
-        </li>
-        
-        `;
+        </li>`;
     }
-    lista.innerHTML = listaItems;
+
+
+    if(lista){
+      lista.innerHTML = listaItems;
+    }else{
+      
+    }
+
   } else {
     for (let i = 0; i < menuItems[opcionMenu].length; i++) {
       var obj = menuItems[opcionMenu][i];
 
       listaItems += `<li class="food-List_else">
-                    <p class="parrafo_else"> ${obj.nombre} </p>
-                    <input type="checkbox" id=${obj.id} onclick="increment(${obj.id})">
-                    
-                </li>`;
+                      <p class="parrafo_else"> ${obj.nombre} </p>
+                      <input type="checkbox" id=${obj.id} onclick="increment(${obj.id})">
+                    </li>`;
     }
 
     lista.innerHTML = listaItems;
   }
+}
+
+function startMenu(){
+  getMenuItems("combos");
 }
 
 function esconderTexto() {

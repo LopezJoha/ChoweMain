@@ -1,4 +1,4 @@
-<main onload="getMenuItems('combos')">
+<main onload="startMenu()">
     <section id="section1" class="body-First-Container">
         <div class="Opacity-Effect"></div>
             <div class="body-First-Content">						
@@ -52,7 +52,7 @@
             <h2 class=" Subtitulo ">Todos los días son días de alitas Chowé.</h2>
         </div> 
         
-        <div id="opcionesMenuContenedor" class="body-Third-Menu">
+        <div id="opcionesMenuContenedor" class="body-Third-Menu" onload="startMenu()">
             <button id="entradas" class="MenuOption" type="button" onclick="handleButtonOptionClick(id)">Entradas</button>						
             <button id="combos" class="activo MenuOption" onclick="handleButtonOptionClick(id)">Combos</button>
             <button id="salsas" class="MenuOption" onclick="handleButtonOptionClick(id)">Salsas</button>
@@ -65,7 +65,7 @@
             <div id="allTheFoodContainer">
                 
                 <ul id="allTheFood" class="food-List">
-                    <script>getMenuItems("combos")</script>
+                   
                     
                 </ul>
                 

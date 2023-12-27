@@ -27,6 +27,11 @@ const urlRoutes = {
     title: "Cart" + urlPageTitle,
     description: "This is the about page",
   },
+  "/index.html": {
+    template: "/../../pages/indexPage.html",
+    title: "Chowe" + urlPageTitle,
+    description: "This is the home page",
+  },
   
 };
 

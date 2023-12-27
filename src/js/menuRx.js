@@ -1,4 +1,3 @@
-
 const newAdding = (button) => {
   var objJSON = button.getAttribute("data-obj");
   var obj = JSON.parse(objJSON);
@@ -40,6 +39,7 @@ const subs = (obj) => {
 const reducer = (state = initialAmount, action) => {
   if (action.type === "Add") {
     const copy = { ...state };
+
     const val = copy[action.payload.Id];
 
     if (val) {
@@ -51,8 +51,7 @@ const reducer = (state = initialAmount, action) => {
       copy[action.payload.Id] = {
         ...action.payload,
         amount: 1,
-      }
-      
+      };
     }
     return copy;
   } else if (action.type === "Subs") {
@@ -60,7 +59,7 @@ const reducer = (state = initialAmount, action) => {
     const val = copy[action.payload.Id];
 
     if (val) {
-      if(copy[action.payload.Id].amount === 1){
+      if (copy[action.payload.Id].amount === 1) {
         delete copy[action.payload.Id];
       } else {
         copy[action.payload.Id] = {
@@ -71,6 +70,7 @@ const reducer = (state = initialAmount, action) => {
     } else {
       // do nothing
     }
+
     return copy;
   } else {
     return state;
@@ -85,26 +85,35 @@ const store = Redux.createStore(reducer);
 // im aware this isnt very efficient code, but its fine for something small like this
 
 store.subscribe(() => {
-  let total = 0;
   const state = store.getState();
   const array = Object.values(menuItems);
-  for(let i = 0; i < array.length; i++){
-    for(let j = 0; j < array[i].length; j++) {
+
+  for (let i = 0; i < array.length; i++) {
+    for (let j = 0; j < array[i].length; j++) {
       const val = array[i][j];
       let cantidadElement = document.querySelector(`#${val.id}-counter`);
-      if(cantidadElement){
+
+      if (cantidadElement) {
         let stateProperty = state[val.id];
-        if(stateProperty){
+        if (stateProperty) {
           const amount = state[val.id].amount;
+
           cantidadElement.innerHTML = amount;
-          total += amount;
         } else {
           cantidadElement.innerHTML = 0;
         }
+      } else {
       }
     }
   }
 
-  document.getElementById("totalCart").innerHTML = total;
-});
+  let subTotal = 0;
+  let copyState = Object.entries(state);
 
+  for (let i = 0; i < copyState.length; i++) {
+    let tryToFindAmount = Object.values(copyState[i][1]);
+    subTotal += tryToFindAmount[4];
+  }
+
+  document.getElementById("totalCart").innerHTML = subTotal;
+});
